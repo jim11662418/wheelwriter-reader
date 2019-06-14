@@ -116,7 +116,7 @@ void parseWWdata(unsigned int WWdata) {
                 break;
             case 2:                     // 0x121,0x003 has been received...          
                 if (WWdata)             // 0x121,0x003,printwheel code
-                   putchar(printwheel[(WWdata-1)&0x5F]); 
+                   putchar(printwheel[(WWdata-1)]); 
                 else
                    putchar(SPACE);      // 0x121,0x003,0x000 is the sequence for SPACE
                 state = 0;
